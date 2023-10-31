@@ -27,9 +27,13 @@ main {
     font-family: 'Ubuntu', sans-serif;
 }
 
+#first-page-container {
+  display: none;
+}
+
 .container {
     height: 600px;
-    width: 900px;
+    width: 1000px;
     background-color: white;
     display: flex;
     padding: 15px;
@@ -43,14 +47,88 @@ main {
     width: 270px;
     height: 568px;
     border-radius: 10px;
-    padding: 30px;
+    padding: 40px 30px;
 }
 
 .step-container {
     display: flex;
-    gap: 10px;
     align-items: center;
+    margin-bottom: 30px;
 }
+
+p.number {
+  color: var(--White);
+  font-weight: 500;
+  height: 35px;
+  width: 35px;
+  border: 1px solid var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+.step-p {
+  color: var(--Light-gray);
+  font-size: 14px;
+}
+
+.your-info {
+  color: var(--White);
+  font-weight: 500;
+}
+
+.single-page-container {
+  margin: 40px auto 20px auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+h1 {
+  font-weight: 700;
+  color: var(--Marine-blue);
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--Cool-gray);
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Marine-blue);
+  margin-bottom: 5px;
+}
+
+.text-input {
+  height: 50px;
+  padding: 10px;
+  border: var(--Light-gray) 1px solid;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.next-step {
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--Light-gray);
+  background-color: var(--Marine-blue);
+  border-radius: 8px;
+}
+
 
 
 .switch {
