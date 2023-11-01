@@ -36,11 +36,15 @@ main {
 }
 
 #third-page-container {
-  display: unset;
+  display: none;
 }
 
 #fourth-page-container {
   display: none;
+}
+
+#fifth-page-container {
+  display: unset;
 }
 
 .container {
@@ -372,8 +376,9 @@ input:checked + .slider:before {
 @-moz-keyframes splash-12 {
   40% {
     background: rgb(71, 61, 255);
-    box-shadow: 0 -18px 0 -8px rgb(71, 61, 255), 16px -8px 0 -8px rgb(71, 61, 255),
-      16px 8px 0 -8px rgb(71, 61, 255), 0 18px 0 -8px rgb(71, 61, 255), -16px 8px 0 -8px rgb(71, 61, 255),
+    box-shadow: 0 -18px 0 -8px rgb(71, 61, 255),
+      16px -8px 0 -8px rgb(71, 61, 255), 16px 8px 0 -8px rgb(71, 61, 255),
+      0 18px 0 -8px rgb(71, 61, 255), -16px 8px 0 -8px rgb(71, 61, 255),
       -16px -8px 0 -8px rgb(71, 61, 255);
   }
   100% {
@@ -386,8 +391,9 @@ input:checked + .slider:before {
 @-webkit-keyframes splash-12 {
   40% {
     background: rgb(71, 61, 255);
-    box-shadow: 0 -18px 0 -8px rgb(71, 61, 255), 16px -8px 0 -8px rgb(71, 61, 255),
-      16px 8px 0 -8px rgb(71, 61, 255), 0 18px 0 -8px rgb(71, 61, 255), -16px 8px 0 -8px rgb(71, 61, 255),
+    box-shadow: 0 -18px 0 -8px rgb(71, 61, 255),
+      16px -8px 0 -8px rgb(71, 61, 255), 16px 8px 0 -8px rgb(71, 61, 255),
+      0 18px 0 -8px rgb(71, 61, 255), -16px 8px 0 -8px rgb(71, 61, 255),
       -16px -8px 0 -8px rgb(71, 61, 255);
   }
   100% {
@@ -400,8 +406,9 @@ input:checked + .slider:before {
 @-o-keyframes splash-12 {
   40% {
     background: rgb(71, 61, 255);
-    box-shadow: 0 -18px 0 -8px rgb(71, 61, 255), 16px -8px 0 -8px rgb(71, 61, 255),
-      16px 8px 0 -8px rgb(71, 61, 255), 0 18px 0 -8px rgb(71, 61, 255), -16px 8px 0 -8px rgb(71, 61, 255),
+    box-shadow: 0 -18px 0 -8px rgb(71, 61, 255),
+      16px -8px 0 -8px rgb(71, 61, 255), 16px 8px 0 -8px rgb(71, 61, 255),
+      0 18px 0 -8px rgb(71, 61, 255), -16px 8px 0 -8px rgb(71, 61, 255),
       -16px -8px 0 -8px rgb(71, 61, 255);
   }
   100% {
@@ -414,8 +421,9 @@ input:checked + .slider:before {
 @keyframes splash-12 {
   40% {
     background: rgb(71, 61, 255);
-    box-shadow: 0 -18px 0 -8px rgb(71, 61, 255), 16px -8px 0 -8px rgb(71, 61, 255),
-      16px 8px 0 -8px rgb(71, 61, 255), 0 18px 0 -8px rgb(71, 61, 255), -16px 8px 0 -8px rgb(71, 61, 255),
+    box-shadow: 0 -18px 0 -8px rgb(71, 61, 255),
+      16px -8px 0 -8px rgb(71, 61, 255), 16px 8px 0 -8px rgb(71, 61, 255),
+      0 18px 0 -8px rgb(71, 61, 255), -16px 8px 0 -8px rgb(71, 61, 255),
       -16px -8px 0 -8px rgb(71, 61, 255);
   }
   100% {
@@ -424,4 +432,98 @@ input:checked + .slider:before {
       32px 16px 0 -10px transparent, 0 36px 0 -10px transparent,
       -32px 16px 0 -10px transparent, -32px -16px 0 -10px transparent;
   }
+}
+
+/* ////////////////////////////////FOURTH PAGE//////////////////////////////// */
+
+.container-summing-up {
+  background-color: var(--Alabaster);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+
+.separator {
+  border-bottom: solid 1px var(--Light-gray);
+}
+
+.first-container-summing-up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#change-button {
+  all: unset;
+  font-size: 14px;
+  color: var(--Cool-gray);
+  text-decoration: underline;
+}
+
+.second-container-summing-up {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.second-container-summing-up p {
+  font-size: 14px;
+  color: var(--Cool-gray);
+}
+
+.second-container-summing-up h5 {
+  color: var(--Marine-blue);
+  font-weight: 400;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  font-size: 14px;
+  color: var(--Cool-gray);
+}
+
+h6 {
+  color: var(--Purplish-blue);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#fourth-page-next-button {
+  background-color: var(--Purplish-blue);
+  color: var(--White);
+}
+
+/* ////////////////////////////////FIFTH PAGE//////////////////////////////// */
+
+.checkmark-container {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/Capture.JPG);
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+#fifth-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+fifth-page-container h1 {
+  margin-bottom: 20px;
+}
+
+#fifth-page-text {
+  text-align: center;
+  color: var(--Cool-gray);
+  line-height: 24px;
 }
