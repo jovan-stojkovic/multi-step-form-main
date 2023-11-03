@@ -34,8 +34,17 @@ const nameError = document.querySelector("#name-error");
 const emailError = document.querySelector("#email-error");
 const phoneNumberError = document.querySelector("#phone-number-error");
 
-//EMAIL PATERN
+//THE REST
 const patern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const selectors = document.querySelectorAll(".selector");
+
+selectors.forEach((button) => {
+  button.addEventListener("click", () => {
+    selectors.forEach((btn) => btn.classList.remove("focused"));
+    button.classList.add("focused");
+    console.log("radi");
+  });
+});
 
 //FIRST PAGE BUTTON(s) LOGIC
 

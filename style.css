@@ -95,6 +95,10 @@ main {
   position: relative;
 }
 
+#first-page-container {
+  display: none;
+}
+
 .last-container {
   display: none;
 }
@@ -237,10 +241,41 @@ input::-webkit-inner-spin-button {
 }
 
 .selector {
-  border: solid 1px var(--Light-gray);
+  border: solid 2px var(--Light-gray);
   border-radius: 8px;
   padding: 15px;
   position: relative;
+  background: none;
+}
+
+.selector:hover {
+  cursor: pointer;
+  border: solid 2px var(--Purplish-blue);
+}
+
+.selector.focused {
+  background-color: var(--Alabaster);
+  border: solid 2px var(--Purplish-blue);
+
+}
+
+.selector img {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.selector h4 {
+  color: var(--Marine-blue);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+.selector p {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--Cool-gray);
+  text-align: left;
 }
 
 .price-container {
