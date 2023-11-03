@@ -54,6 +54,9 @@ selectors.forEach((button) => {
 });
 
 paymentToggle.addEventListener("click", () => {
+  textMonthly.classList.toggle("toggle-text-selected");
+  textYearly.classList.toggle("toggle-text-selected");
+
   yearlyPriceInfos.forEach((paragraph) => {
     paragraph.classList.toggle("two-months-active");
   });
@@ -65,11 +68,6 @@ paymentToggle.addEventListener("click", () => {
   yearlyPrice.forEach((info) => {
     info.classList.toggle("price-info-year-active");
   });
-});
-
-paymentToggle.addEventListener("click", () => {
-  textMonthly.classList.toggle("toggle-text-selected");
-  textYearly.classList.toggle("toggle-text-selected");
 });
 
 //FIRST PAGE BUTTON(s) LOGIC
