@@ -21,28 +21,28 @@
         <!-- =================================LEFT SIDE================================= -->
         <div class="left-info-side">
           <div class="step-container">
-            <p class="number number-active">1</p>
+            <p class="number number-active" id="stepOne">1</p>
             <div class="step-info">
               <p class="step-p">STEP 1</p>
               <p class="your-info">YOUR INFO</p>
             </div>
           </div>
           <div class="step-container">
-            <p class="number">2</p>
+            <p class="number" id="stepTwo">2</p>
             <div class="step-info">
               <p class="step-p">STEP 2</p>
               <p class="your-info">SELECT PLAN</p>
             </div>
           </div>
           <div class="step-container">
-            <p class="number">3</p>
+            <p class="number" id="stepThree">3</p>
             <div class="step-info">
               <p class="step-p">STEP 1</p>
               <p class="your-info">ADD-ONS</p>
             </div>
           </div>
           <div class="step-container">
-            <p class="number">4</p>
+            <p class="number" id="stepFour">4</p>
             <div class="step-info">
               <p class="step-p">STEP 1</p>
               <p class="your-info">SUMMARY</p>
@@ -51,7 +51,7 @@
         </div>
 
         <!-- =================================FIRST PAGE================================= -->
-        <div class="single-page-container" id="first-page-container">
+        <div class="single-page-container single-page-container-active" id="first-page-container">
           <h1>Personal info</h1>
           <h3>Please provide your name, email address, and phone number.</h3>
 
@@ -313,14 +313,14 @@
             <h6>+$12/mo</h6>
           </div>
           <button class="go-back" id="fourth-page-go-back">Go Back</button>
-          <button class="next-step" id="fourth-page-next-button">
+          <button class="confirm" id="confirm-button">
             Confirm
           </button>
         </div>
 
         <!-- =================================FIFTH PAGE================================= -->
 
-        <div class="single-page-container" id="fifth-page-container">
+        <div class="last-container" id="fifth-page-container">
           <div class="checkmark-container"></div>
           <h1>Thank you!</h1>
           <p id="fifth-page-text">
