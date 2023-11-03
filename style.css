@@ -268,14 +268,24 @@ input::-webkit-inner-spin-button {
 .selector h4 {
   color: var(--Marine-blue);
   font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
 }
 
-.selector p {
+.price-info {
   font-family: "Ubuntu", sans-serif;
   color: var(--Cool-gray);
   text-align: left;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.two-months {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--Marine-blue);
+  text-align: left;
+  font-weight: 500;
+  display: none;
 }
 
 .price-container {

@@ -46,6 +46,7 @@ selectors.forEach((button) => {
   });
 });
 
+
 //FIRST PAGE BUTTON(s) LOGIC
 
 nextFirstPage.addEventListener("click", () => {
