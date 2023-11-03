@@ -28,7 +28,7 @@ main {
 }
 
 #first-page-container {
-  display: none;
+  display: flex;
 }
 
 #second-page-container {
@@ -44,7 +44,9 @@ main {
 }
 
 #fifth-page-container {
-  display: unset;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -72,7 +74,7 @@ main {
   margin-bottom: 30px;
 }
 
-p.number {
+.number {
   color: var(--White);
   font-weight: 500;
   height: 35px;
@@ -85,6 +87,12 @@ p.number {
   margin-right: 10px;
 }
 
+.number-active {
+  background-color: var(--Light-blue);
+  color: var(--Marine-blue);
+  border: 1px solid var(--Light-blue);
+}
+
 .step-p {
   color: var(--Light-gray);
   font-size: 14px;
@@ -93,6 +101,7 @@ p.number {
 .your-info {
   color: var(--White);
   font-weight: 500;
+  font-size: 15px;
 }
 
 .single-page-container {
@@ -116,19 +125,54 @@ h3 {
   margin-bottom: 30px;
 }
 
+.label-error-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 label {
   font-size: 14px;
   font-weight: 500;
   color: var(--Marine-blue);
+  margin-bottom: 10px;
+}
+
+.error {
+  font-size: 14px;
+  font-weight: 700;
+  color: red;
   margin-bottom: 5px;
 }
 
 .text-input {
   height: 50px;
-  padding: 10px;
-  border: var(--Light-gray) 1px solid;
+  padding-left: 15px;
+  border: var(--Light-gray) 2px solid;
   border-radius: 8px;
   margin-bottom: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--Marine-blue);
+}
+
+.text-input-error {
+  border: red 2px solid;
+}
+
+.text-input:focus {
+  outline: none;
+  border: 2px var(--Purplish-blue) solid;
+}
+
+.text-input:hover {
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .next-step {
@@ -143,6 +187,12 @@ label {
   color: var(--Light-gray);
   background-color: var(--Marine-blue);
   border-radius: 8px;
+}
+
+.next-step:hover {
+  cursor: pointer;
+  background-color: hsla(213, 65%, 32%, 0.892);
+  color: var(--White);
 }
 
 .go-back {
@@ -510,12 +560,6 @@ h6 {
   background-image: url(images/Capture.JPG);
   background-repeat: no-repeat;
   margin-bottom: 20px;
-}
-
-#fifth-page-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 fifth-page-container h1 {

@@ -21,7 +21,7 @@
         <!-- =================================LEFT SIDE================================= -->
         <div class="left-info-side">
           <div class="step-container">
-            <p class="number">1</p>
+            <p class="number number-active">1</p>
             <div class="step-info">
               <p class="step-p">STEP 1</p>
               <p class="your-info">YOUR INFO</p>
@@ -55,7 +55,10 @@
           <h1>Personal info</h1>
           <h3>Please provide your name, email address, and phone number.</h3>
 
-          <label for="name">Name</label>
+          <div class="label-error-container">
+            <label for="name">Name</label>
+            <p class="error" id="name-error"></p>
+          </div>
           <input
             class="text-input"
             type="text"
@@ -63,7 +66,10 @@
             placeholder="e.g. Stehpen King"
           />
 
-          <label for="email">Email Address</label>
+          <div class="label-error-container">
+            <label for="email">Email Address</label>
+            <p class="error" id="email-error"></p>
+          </div>
           <input
             class="text-input"
             type="text"
@@ -71,7 +77,11 @@
             placeholder="e.g. stephenking@lorem.com"
           />
 
-          <label for="phone-number">Phone Number</label>
+          <div class="label-error-container">
+            <label for="phone-number">Phone Number</label>
+            <p class="error" id="number-error"></p>
+          </div>
+
           <input
             class="text-input"
             type="number"
