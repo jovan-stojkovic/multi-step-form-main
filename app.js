@@ -45,6 +45,9 @@ const textYearly = document.querySelector("#yearly");
 const yearlyPriceInfos = document.querySelectorAll(".two-months");
 const monthlyPrice = document.querySelectorAll(".price-info");
 const yearlyPrice = document.querySelectorAll(".price-info-year");
+const addonFirstOption = document.querySelector("#first-option");
+const addonSecondOption = document.querySelector("#second-option");
+const addonThirdOption = document.querySelector("#third-option");
 
 selectors.forEach((button) => {
   button.addEventListener("click", () => {
@@ -54,6 +57,15 @@ selectors.forEach((button) => {
 });
 
 paymentToggle.addEventListener("click", () => {
+  let txtOptOne = addonFirstOption.innerText;
+  addonFirstOption.innerText = txtOptOne == "+$1/mo" ? "+$10/yr" : "+$1/mo";
+
+  let txtOptTwo = addonSecondOption.innerText;
+  addonSecondOption.innerText = txtOptTwo == "+$2/mo" ? "+$20/yr" : "+$2/mo";
+
+  let txtOptThree = addonThirdOption.innerText;
+  addonThirdOption.innerText = txtOptThree == "+$2/mo" ? "+$20/yr" : "+$2/mo";
+
   textMonthly.classList.toggle("toggle-text-selected");
   textYearly.classList.toggle("toggle-text-selected");
 
