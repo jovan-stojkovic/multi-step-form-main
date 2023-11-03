@@ -190,7 +190,6 @@ input::-webkit-inner-spin-button {
   border-radius: 8px;
 }
 
-
 .next-step:hover {
   cursor: pointer;
   background-color: hsla(213, 65%, 32%, 0.9);
@@ -237,7 +236,7 @@ input::-webkit-inner-spin-button {
   display: grid;
   grid-template-columns: repeat(3, 30%);
   justify-content: space-between;
-  grid-auto-rows: 170px;
+  grid-auto-rows: 200px;
 }
 
 .selector {
@@ -256,7 +255,6 @@ input::-webkit-inner-spin-button {
 .selector.focused {
   background-color: var(--Alabaster);
   border: solid 2px var(--Purplish-blue);
-
 }
 
 .selector img {
@@ -280,12 +278,40 @@ input::-webkit-inner-spin-button {
   font-size: 15px;
 }
 
+.price-info-active {
+  display: none;
+}
+
+.price-info-year {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--Cool-gray);
+  text-align: left;
+  margin: 5px 0;
+  font-size: 15px;
+  display: none;
+}
+
+.price-info-year-active {
+  display: block;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--Cool-gray);
+  text-align: left;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
 .two-months {
   font-family: "Ubuntu", sans-serif;
   color: var(--Marine-blue);
   text-align: left;
   font-weight: 500;
-  display: none;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.two-months-active {
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .price-container {
@@ -294,12 +320,7 @@ input::-webkit-inner-spin-button {
   left: 15px;
 }
 
-.price-info {
-  color: var(--Cool-gray);
-  font-weight: 400;
-}
-
-h4 {
+.price-container h4 {
   color: var(--Marine-blue);
 }
 
@@ -375,7 +396,11 @@ input:checked + .slider:before {
 .toggle-text {
   font-size: 14px;
   color: var(--Cool-gray);
-  font-weight: 500;
+  font-weight: 700;
+}
+
+.toggle-text-selected {
+  color: var(--Marine-blue);
 }
 
 /* ////////////////////////////////THIRD PAGE//////////////////////////////// */

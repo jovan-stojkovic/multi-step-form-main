@@ -38,14 +38,39 @@ const phoneNumberError = document.querySelector("#phone-number-error");
 const patern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 const selectors = document.querySelectorAll(".selector");
 
+//PAYMENT TOGGLE
+const paymentToggle = document.querySelector("#payment-toggle");
+const textMonthly = document.querySelector("#monthly");
+const textYearly = document.querySelector("#yearly");
+const yearlyPriceInfos = document.querySelectorAll(".two-months");
+const monthlyPrice = document.querySelectorAll(".price-info");
+const yearlyPrice = document.querySelectorAll(".price-info-year");
+
 selectors.forEach((button) => {
   button.addEventListener("click", () => {
     selectors.forEach((btn) => btn.classList.remove("focused"));
     button.classList.add("focused");
-    console.log("radi");
   });
 });
 
+paymentToggle.addEventListener("click", () => {
+  yearlyPriceInfos.forEach((paragraph) => {
+    paragraph.classList.toggle("two-months-active");
+  });
+
+  monthlyPrice.forEach((info) => {
+    info.classList.toggle("price-info-active");
+  });
+
+  yearlyPrice.forEach((info) => {
+    info.classList.toggle("price-info-year-active");
+  });
+});
+
+paymentToggle.addEventListener("click", () => {
+  textMonthly.classList.toggle("toggle-text-selected");
+  textYearly.classList.toggle("toggle-text-selected");
+});
 
 //FIRST PAGE BUTTON(s) LOGIC
 
