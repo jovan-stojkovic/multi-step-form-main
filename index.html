@@ -98,15 +98,17 @@
         </div>
 
         <!-- =================================SECOND PAGE================================= -->
-        <div
-          class="single-page-container"
-          id="second-page-container"
-        >
+        <div class="single-page-container" id="second-page-container">
           <h1>Select yout plan</h1>
           <h3>You have the option of monthly of yearly billing.</h3>
 
           <div class="selectors">
-            <button class="selector focused" id="arcade-selector" data-value="9" data-name="Arcade">
+            <button
+              class="selector focused"
+              id="arcade-selector"
+              data-value="9"
+              data-name="Arcade"
+            >
               <img
                 src="images/icon-arcade.svg"
                 alt="arcade-icon"
@@ -121,7 +123,12 @@
               </div>
             </button>
 
-            <button class="selector" id="advanced-selector" data-value="12" data-name="Advanced">
+            <button
+              class="selector"
+              id="advanced-selector"
+              data-value="12"
+              data-name="Advanced"
+            >
               <img
                 src="images/icon-advanced.svg"
                 alt="advanced-icon"
@@ -136,7 +143,13 @@
               </div>
             </button>
 
-            <button class="selector" id="pro-selector" data-value="15" data-name="Pro">
+            <button
+              class="selector"
+              id="pro-selector"
+              data-value="15"
+              data-name="Pro"
+              value="15"
+            >
               <img
                 src="images/icon-pro.svg"
                 alt="pro-icon"
@@ -155,7 +168,7 @@
           <div class="toggle">
             <p id="monthly" class="toggle-text toggle-text-selected">Monthly</p>
             <label class="switch">
-              <input type="checkbox" id="payment-toggle" />
+              <input type="checkbox" class="left" id="payment-toggle" />
               <span class="slider round"></span>
             </label>
             <p id="yearly" class="toggle-text">Yearly</p>
@@ -176,8 +189,8 @@
           <div class="addons-container">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input id="cbx-12" type="checkbox" />
-                <label for="cbx-12"></label>
+                <input id="cbx-1" type="checkbox" />
+                <label for="cbx-1"></label>
                 <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
                 </svg>
@@ -212,8 +225,8 @@
           <div class="addons-container">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input id="cbx-12" type="checkbox" />
-                <label for="cbx-12"></label>
+                <input id="cbx-2" type="checkbox" />
+                <label for="cbx-2"></label>
                 <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
                 </svg>
@@ -248,8 +261,8 @@
           <div class="addons-container">
             <div class="checkbox-wrapper-12">
               <div class="cbx">
-                <input id="cbx-12" type="checkbox" />
-                <label for="cbx-12"></label>
+                <input id="cbx-3" type="checkbox" />
+                <label for="cbx-3"></label>
                 <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
                   <path d="M2 8.36364L6.23077 12L13 2"></path>
                 </svg>
@@ -306,13 +319,17 @@
               </div>
             </div>
             <div class="separator"></div>
-            <div class="second-container-summing-up">
+            <div class="second-container-summing-up online-service-container" data-value="1">
               <p>Online service</p>
-              <h5>+$1/mo</h5>
+              <h5 class="online-service-price"></h5>
             </div>
-            <div class="second-container-summing-up">
+            <div class="second-container-summing-up larger-storage-container" data-value="2">
               <p>Larger storage</p>
-              <h5>+$2/mo</h5>
+              <h5 class="larger-storage-price"></h5>
+            </div>
+            <div class="second-container-summing-up customizable-profile-container" data-value="2">
+              <p>Customizable profile</p>
+              <h5 class="customizable-profile-price"></h5>
             </div>
           </div>
 

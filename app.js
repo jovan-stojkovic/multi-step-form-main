@@ -34,11 +34,6 @@ const nameError = document.querySelector("#name-error");
 const emailError = document.querySelector("#email-error");
 const phoneNumberError = document.querySelector("#phone-number-error");
 
-//THE REST
-const patern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-const selectors = document.querySelectorAll(".selector");
-const changeButton = document.querySelector("#change-button");
-
 //PAYMENT TOGGLE
 const paymentToggle = document.querySelector("#payment-toggle");
 const textMonthly = document.querySelector("#monthly");
@@ -54,6 +49,31 @@ const addonThirdOption = document.querySelector("#third-option");
 const priceSummary = document.querySelector("#price-summary");
 const totalPriceSummary = document.querySelector("#total-price");
 const nameSummary = document.querySelector("#option-name");
+const onlineSrvcValue = parseFloat(
+  document.querySelector(".online-service-container").getAttribute("data-value")
+);
+const largerStorageValue = parseFloat(
+  document.querySelector(".larger-storage-container").getAttribute("data-value")
+);
+const customizableValue = parseFloat(
+  document
+    .querySelector(".customizable-profile-container")
+    .getAttribute("data-value")
+);
+
+const onlineSrvcPrice = document.querySelector(".online-service-price");
+const largerStoragePrice = document.querySelector(".larger-storage-price");
+const customizablePrice = document.querySelector(".customizable-profile-price");
+
+//THE REST
+const patern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const selectors = document.querySelectorAll(".selector");
+const changeButton = document.querySelector("#change-button");
+
+//THIRD PAGE CHECKBOXES
+const firstCheckbox = document.querySelector("#cbx-1");
+const secondCheckbox = document.querySelector("#cbx-2");
+const thirdCheckbox = document.querySelector("#cbx-3");
 
 selectors.forEach((button) => {
   button.addEventListener("click", () => {
@@ -62,7 +82,32 @@ selectors.forEach((button) => {
   });
 });
 
+
+
+const renderPrice = () => {
+  const focusedOption = document.querySelector(".focused");
+  const focusedPrice = parseFloat(focusedOption.getAttribute("data-value"));
+  const focusedName = focusedOption.getAttribute("data-name");
+
+  onlineSrvcPrice.innerText = `+$${onlineSrvcValue}/mo`;
+  largerStoragePrice.innerText = `+$${largerStorageValue}/mo`;
+  customizablePrice.innerText = `+$${customizableValue}/mo`;
+
+  if (!paymentToggle.checked) {
+    priceSummary.innerText = `$${parseFloat(focusedPrice)}/mo`;
+    nameSummary.innerText = `${focusedName} (Monthly)`;
+  } else if (paymentToggle.checked) {
+    priceSummary.innerText = `$${parseFloat(focusedPrice) * 10}/yr`;
+    nameSummary.innerText = `${focusedName} (Yearly)`;
+  }
+
+  if (firstCheckbox.checked) {
+  }
+};
+
 paymentToggle.addEventListener("click", () => {
+  paymentToggle.classList.toggle("right");
+  paymentToggle.classList.toggle("left");
   let txtOptOne = addonFirstOption.innerText;
   addonFirstOption.innerText = txtOptOne == "+$1/mo" ? "+$10/yr" : "+$1/mo";
 
@@ -87,14 +132,6 @@ paymentToggle.addEventListener("click", () => {
     info.classList.toggle("price-info-year-active");
   });
 });
-
-const renderPrice = () => {
-  const focusedOption = document.querySelector(".focused");
-  const focusedPrice = parseFloat(focusedOption.getAttribute("data-value"));
-  const focusedName = focusedOption.getAttribute("data-name");
-  priceSummary.innerText = `$${parseFloat(focusedPrice)}/mo`;
-  nameSummary.innerText = `${focusedName} (Monthly)`;
-};
 
 changeButton.addEventListener("click", () => {
   pageFour.classList.remove("single-page-container-active");
