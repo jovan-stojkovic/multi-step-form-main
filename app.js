@@ -49,6 +49,9 @@ const addonFirstOption = document.querySelector("#first-option");
 const addonSecondOption = document.querySelector("#second-option");
 const addonThirdOption = document.querySelector("#third-option");
 
+//SUMMARY PAGE
+const priceSummary = document.querySelector("#price-summary");
+
 selectors.forEach((button) => {
   button.addEventListener("click", () => {
     selectors.forEach((btn) => btn.classList.remove("focused"));
@@ -81,6 +84,12 @@ paymentToggle.addEventListener("click", () => {
     info.classList.toggle("price-info-year-active");
   });
 });
+
+const renderPrice = () => {
+  const focusedOption = document.querySelector(".focused");
+  const focusedPrice = parseFloat(focusedOption.getAttribute("data-value"));
+  priceSummary.innerText = `$${parseFloat(focusedPrice)}/mo`;
+};
 
 //FIRST PAGE BUTTON(s) LOGIC
 
@@ -151,6 +160,8 @@ backThirdPage.addEventListener("click", () => {
 
 //THIRD PAGE BUTTON(s) LOGIC
 nextThirdPage.addEventListener("click", () => {
+  renderPrice();
+
   pageThree.classList.remove("single-page-container-active");
   pageFour.classList.add("single-page-container-active");
 
