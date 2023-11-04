@@ -37,6 +37,7 @@ const phoneNumberError = document.querySelector("#phone-number-error");
 //THE REST
 const patern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 const selectors = document.querySelectorAll(".selector");
+const changeButton = document.querySelector("#change-button");
 
 //PAYMENT TOGGLE
 const paymentToggle = document.querySelector("#payment-toggle");
@@ -94,6 +95,14 @@ const renderPrice = () => {
   priceSummary.innerText = `$${parseFloat(focusedPrice)}/mo`;
   nameSummary.innerText = `${focusedName} (Monthly)`;
 };
+
+changeButton.addEventListener("click", () => {
+  pageFour.classList.remove("single-page-container-active");
+  pageTwo.classList.add("single-page-container-active");
+
+  stepFour.classList.remove("number-active");
+  stepTwo.classList.add("number-active");
+});
 
 //FIRST PAGE BUTTON(s) LOGIC
 

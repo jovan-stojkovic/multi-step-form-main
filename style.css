@@ -598,6 +598,13 @@ input:checked + .slider:before {
   font-size: 14px;
   color: var(--Cool-gray);
   text-decoration: underline;
+  margin-top: 5px;
+}
+
+#change-button:hover {
+  color: var(--Marine-blue);
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .second-container-summing-up {
