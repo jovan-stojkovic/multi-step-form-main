@@ -60,15 +60,23 @@ const customizableValue = parseFloat(
     .querySelector(".customizable-profile-container")
     .getAttribute("data-value")
 );
-
 const onlineSrvcPrice = document.querySelector(".online-service-price");
 const largerStoragePrice = document.querySelector(".larger-storage-price");
 const customizablePrice = document.querySelector(".customizable-profile-price");
+
+const onlineSrvcContainer = document.querySelector(".online-service-container");
+const largerStorageContainer = document.querySelector(
+  ".larger-storage-container"
+);
+const customizableContainer = document.querySelector(
+  ".customizable-profile-container"
+);
 
 //THE REST
 const patern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 const selectors = document.querySelectorAll(".selector");
 const changeButton = document.querySelector("#change-button");
+const separator = document.querySelector(".separator");
 
 //THIRD PAGE CHECKBOXES
 const firstCheckbox = document.querySelector("#cbx-1");
@@ -81,8 +89,6 @@ selectors.forEach((button) => {
     button.classList.add("focused");
   });
 });
-
-
 
 const renderPrice = () => {
   const focusedOption = document.querySelector(".focused");
@@ -101,7 +107,30 @@ const renderPrice = () => {
     nameSummary.innerText = `${focusedName} (Yearly)`;
   }
 
-  if (firstCheckbox.checked) {
+  if (firstCheckbox.checked && !paymentToggle.checked) {
+    onlineSrvcContainer.classList.add("second-container-summing-up-active");
+    separator.classList.add("separator-active");
+  } else if (firstCheckbox.checked && paymentToggle.checked) {
+    onlineSrvcContainer.classList.add("second-container-summing-up-active");
+    separator.classList.add("separator-active");
+    onlineSrvcPrice.innerText = "+$10/yr";
+  }
+  if (secondCheckbox.checked && !paymentToggle.checked) {
+    largerStorageContainer.classList.add("second-container-summing-up-active");
+    separator.classList.add("separator-active");
+  } else if (secondCheckbox.checked && paymentToggle.checked) {
+    largerStorageContainer.classList.add("second-container-summing-up-active");
+    separator.classList.add("separator-active");
+    largerStoragePrice.innerText = "+$20/yr";
+  }
+
+  if (thirdCheckbox.checked && !paymentToggle.checked) {
+    customizableContainer.classList.add("second-container-summing-up-active");
+    separator.classList.add("separator-active");
+  } else if (thirdCheckbox.checked && paymentToggle.checked) {
+    customizableContainer.classList.add("second-container-summing-up-active");
+    separator.classList.add("separator-active");
+    customizablePrice.innerText = "+$20/yr";
   }
 };
 
@@ -139,6 +168,11 @@ changeButton.addEventListener("click", () => {
 
   stepFour.classList.remove("number-active");
   stepTwo.classList.add("number-active");
+
+  onlineSrvcContainer.classList.remove("second-container-summing-up-active");
+  largerStorageContainer.classList.remove("second-container-summing-up-active");
+  customizableContainer.classList.remove("second-container-summing-up-active");
+  separator.classList.remove("separator-active");
 });
 
 //FIRST PAGE BUTTON(s) LOGIC
@@ -222,4 +256,9 @@ backFourthPage.addEventListener("click", () => {
 
   stepThree.classList.add("number-active");
   stepFour.classList.remove("number-active");
+
+  onlineSrvcContainer.classList.remove("second-container-summing-up-active");
+  largerStorageContainer.classList.remove("second-container-summing-up-active");
+  customizableContainer.classList.remove("second-container-summing-up-active");
+  separator.classList.remove("separator-active");
 });

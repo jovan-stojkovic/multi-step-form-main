@@ -585,6 +585,11 @@ input:checked + .slider:before {
 
 .separator {
   border-bottom: solid 1px var(--Light-gray);
+  display: none;
+}
+
+.separator-active {
+  display: unset;
 }
 
 .first-container-summing-up {
@@ -608,9 +613,9 @@ input:checked + .slider:before {
 }
 
 .second-container-summing-up {
-  display: flex;
   align-content: center;
   justify-content: space-between;
+  display: none;
 }
 
 .second-container-summing-up p {
@@ -621,6 +626,10 @@ input:checked + .slider:before {
 .second-container-summing-up h5 {
   color: var(--Marine-blue);
   font-weight: 400;
+}
+
+.second-container-summing-up-active {
+  display: flex;
 }
 
 .total {
