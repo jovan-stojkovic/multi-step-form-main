@@ -51,6 +51,8 @@ const addonThirdOption = document.querySelector("#third-option");
 
 //SUMMARY PAGE
 const priceSummary = document.querySelector("#price-summary");
+const totalPriceSummary = document.querySelector("#total-price");
+const nameSummary = document.querySelector("#option-name");
 
 selectors.forEach((button) => {
   button.addEventListener("click", () => {
@@ -88,7 +90,9 @@ paymentToggle.addEventListener("click", () => {
 const renderPrice = () => {
   const focusedOption = document.querySelector(".focused");
   const focusedPrice = parseFloat(focusedOption.getAttribute("data-value"));
+  const focusedName = focusedOption.getAttribute("data-name");
   priceSummary.innerText = `$${parseFloat(focusedPrice)}/mo`;
+  nameSummary.innerText = `${focusedName} (Monthly)`;
 };
 
 //FIRST PAGE BUTTON(s) LOGIC
@@ -139,23 +143,6 @@ backSecondPage.addEventListener("click", () => {
 
   stepOne.classList.add("number-active");
   stepTwo.classList.remove("number-active");
-});
-
-//THIRD PAGE BUTTON(s) LOGIC
-nextThirdPage.addEventListener("click", () => {
-  pageThree.classList.remove("single-page-container-active");
-  pageFour.classList.add("single-page-container-active");
-
-  stepThree.classList.remove("number-active");
-  stepFour.classList.add("number-active");
-});
-
-backThirdPage.addEventListener("click", () => {
-  pageTwo.classList.add("single-page-container-active");
-  pageThree.classList.remove("single-page-container-active");
-
-  stepTwo.classList.add("number-active");
-  stepThree.classList.remove("number-active");
 });
 
 //THIRD PAGE BUTTON(s) LOGIC
