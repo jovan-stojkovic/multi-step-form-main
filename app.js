@@ -11,6 +11,11 @@ const backFourthPage = document.querySelector("#fourth-page-go-back");
 //CONFIRM BUTTON
 const confirmButton = document.querySelector("#confirm-button");
 
+//SELECTORS
+const firstOption = document.querySelector("#arcade-selector");
+const secondOption = document.querySelector("#advanced-selector");
+const thirdOption = document.querySelector("#pro-selector");
+
 //PAGES
 const pageOne = document.querySelector("#first-page-container");
 const pageTwo = document.querySelector("#second-page-container");
@@ -134,6 +139,328 @@ const renderPrice = () => {
   }
 };
 
+const totalPriceFn = () => {
+  let total;
+  let period;
+  let selectedPrice;
+
+  if (!paymentToggle.checked) {
+    period = "mo";
+    if (firstOption.classList.contains("focused")) {
+      selectedPrice = 9;
+      if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 0 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 1 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 3 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 5 + selectedPrice;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 2 + selectedPrice;
+      } else if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 2 + selectedPrice;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 4 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 3 + selectedPrice;
+      }
+    } else if (secondOption.classList.contains("focused")) {
+      selectedPrice = 12;
+      if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 0 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 1 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 3 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 5 + selectedPrice;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 2 + selectedPrice;
+      } else if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 2 + selectedPrice;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 4 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 3 + selectedPrice;
+      }
+    } else if (thirdOption.classList.contains("focused")) {
+      selectedPrice = 15;
+      if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 0 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 1 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 3 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 5 + selectedPrice;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = 2 + selectedPrice;
+      } else if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 2 + selectedPrice;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 4 + selectedPrice;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = 3 + selectedPrice;
+      }
+    }
+  } else if (paymentToggle.checked) {
+    period = "yr";
+    if (firstOption.classList.contains("focused")) {
+      selectedPrice = 9;
+      if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (0 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (1 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (3 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (5 + selectedPrice) * 10;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (2 + selectedPrice) * 10;
+      } else if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (2 + selectedPrice) * 10;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (4 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (3 + selectedPrice) * 10;
+      }
+    } else if (secondOption.classList.contains("focused")) {
+      selectedPrice = 12;
+      if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (0 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (1 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (3 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (5 + selectedPrice) * 10;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (2 + selectedPrice) * 10;
+      } else if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (2 + selectedPrice) * 10;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (4 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (3 + selectedPrice) * 10;
+      }
+    } else if (thirdOption.classList.contains("focused")) {
+      selectedPrice = 15;
+      if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (0 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (1 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (3 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (5 + selectedPrice) * 10;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        !thirdCheckbox.checked
+      ) {
+        total = (2 + selectedPrice) * 10;
+      } else if (
+        !firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (2 + selectedPrice) * 10;
+      } else if (
+        !firstCheckbox.checked &&
+        secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (4 + selectedPrice) * 10;
+      } else if (
+        firstCheckbox.checked &&
+        !secondCheckbox.checked &&
+        thirdCheckbox.checked
+      ) {
+        total = (3 + selectedPrice) * 10;
+      }
+    }
+  }
+
+  totalPriceSummary.innerText = `+$${total}/${period}`;
+};
+
 paymentToggle.addEventListener("click", () => {
   paymentToggle.classList.toggle("right");
   paymentToggle.classList.toggle("left");
@@ -228,6 +555,7 @@ backSecondPage.addEventListener("click", () => {
 //THIRD PAGE BUTTON(s) LOGIC
 nextThirdPage.addEventListener("click", () => {
   renderPrice();
+  totalPriceFn();
 
   pageThree.classList.remove("single-page-container-active");
   pageFour.classList.add("single-page-container-active");
